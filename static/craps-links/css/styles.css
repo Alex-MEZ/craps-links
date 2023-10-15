@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align children to the start (top) */
+  align-items: center; /* Center children horizontally */
+  min-height: 100vh; /* Minimum height is the full viewport height */
+}
+
+.form-container {
+  max-width: 500px;
+  background-color: #e8f5fe;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #b8d0f4;
+  border-radius: 10px;
+  margin: 100px 0 20px 0; /* Top and bottom margin set to auto to center the form container vertically */
+}
+
+.table-container {
+  width: 100%;
+  margin: 0 auto; /* centers the div horizontally */
+  overflow: hidden; /* ensures that any content that spills out of this container is hidden */
+}
+
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #003366;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"] {
+  padding: 10px;
+  border: 1px solid #b8d0f4;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus {
+  border-color: #007BFF;
+}
+
+button[type="submit"], a.button-like {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  border: 1px solid #007BFF;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+button[type="submit"]:hover, a.button-like:hover {
+  background-color: #0056b3;
+  border-color: #003366;
+}
+
+.shortened-link {
+  margin-bottom: 10px;
+}
+
+.scrollable-table {
+  max-width: 100%; /* restricting to viewport width */
+  display: block;
+  overflow-x: auto; /* enables horizontal scrollbar */
+  border-collapse: collapse;
+}
+
+.scrollable-table th, .scrollable-table td {
+  white-space: nowrap; /* this will prevent text wrapping and will expand cell width based on content */
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.scrollable-table thead tr {
+  background-color: #f2f2f2;
+}
+
+.scrollable-table a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.scrollable-table a:hover {
+  text-decoration: underline;
+}

@@ -1,7 +1,9 @@
 import random
 
+import json
 from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Token(models.Model):
@@ -37,3 +39,14 @@ class Token(models.Model):
 
     def __str__(self) -> str:
         return f'{self.short_url} -> {self.full_url}'
+
+
+class UserSavedLinks(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    link_pairs = models.TextField(default="[]")
+
+    def set_link_pairs(self, pairs_list):
+        self.link_pairs = json.dumps(pairs_list)
+
+    def get_link_pairs(self):
+        return json.loads(self.link_pairs)

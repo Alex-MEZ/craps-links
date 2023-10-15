@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'craps-links/css/styles.css' %}">
+
+    <title>SpeedyLink</title>
+</head>
+
+<body>
+    <header>
+        <!-- You can put common header elements here -->
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Individual page content will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- You can put common footer elements here -->
+    </footer>
+</body>
+</html>
